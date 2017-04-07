@@ -1,4 +1,4 @@
-FROM walkerk1980/freenas-kali:intermediate
+FROM walkerk1980/freenaskali:intermediate
 LABEL org.freenas.interactive="true" \
       org.freenas.version="3" \
       org.freenas.upgradeable="false" \
