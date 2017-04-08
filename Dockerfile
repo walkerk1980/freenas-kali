@@ -5,6 +5,9 @@ RUN /bin/sed -i s/"PermitRootLogin prohibit-password"/"PermitRootLogin yes"/ /et
 RUN /bin/systemctl enable ssh
 RUN mv /usr/sbin/tcpdump /usr/bin/tcpdump #&& hash –r
 RUN apt-get clean
+EXPOSE 22
+EXPOSE 8834
+EXPOSE 9392
 LABEL org.freenas.interactive="true" \
       org.freenas.command="/bin/sh" \
       org.freenas.version="2" \
@@ -12,9 +15,9 @@ LABEL org.freenas.interactive="true" \
       org.freenas.port-mappings="22:22/tcp" \
       org.freenas.expose-ports-at-host="true" \
       org.freenas.autostart="true" \
-#      org.freenas.volumes="[				\
-#          {						\
-#              \"name\": \"/root\",		\
-#              \"descr\": \"Presistance directory for roots home folder\"	\
-#          }						\
-#       ]"  \
+      org.freenas.volumes="[				\
+          {						\
+              \"name\": \"/root\",		\
+              \"descr\": \"Presistance directory for roots home folder\"	\
+          }						\
+       ]"  \
