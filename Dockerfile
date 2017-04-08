@@ -12,9 +12,9 @@ LABEL org.freenas.interactive="true" \
       org.freenas.port-mappings="22:22/tcp" \
       org.freenas.expose-ports-at-host="true" \
       org.freenas.autostart="true" \
-      org.freenas.volumes="[				\
-          {						\
-              \"name\": \"/root\",		\
-              \"descr\": \"Presistance directory for roots home folder\"	\
-          }						\
-       ]"
+#      org.freenas.volumes="[				\
+#          {						\
+#              \"name\": \"/root\",		\
+#              \"descr\": \"Presistance directory for roots home folder\"	\
+#          }						\
+#       ]"  \
